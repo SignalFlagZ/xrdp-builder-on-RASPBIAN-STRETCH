@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Build and install xrdp with pulseaudio sink module on RASPBIAN STRETCH
 # Aug. 21 2017
 # Signal Flag "Z"
@@ -40,12 +40,10 @@ cd ~/Downloads
 wget https://freedesktop.org/software/pulseaudio/releases/pulseaudio-10.0.tar.gz
 tar -zxvf pulseaudio-10.0.tar.gz
 cd ~/Downloads/pulseaudio-10.0
-
-myHome=`echo -n ~`
-cd ${myHome}/Downloads
-
+#
 ./configure
 cd ~/Downloads/xrdp/sesman/chansrv/pulse
+myHome=`echo -n ~`
 sed -i "s#PULSE_DIR = /tmp/pulseaudio-10.0#PULSE_DIR = ${myHome}/Downloads/pulseaudio-10.0#g" Makefile
 sed -ie '/CFLAGS/s/fPIC$/fPIC -DXRDP_SOCKET_PATH=\"\/tmp\/.xrdp\"/g' Makefile
 sudo make
