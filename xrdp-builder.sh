@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Build and install xrdp with pulseaudio sink module on RASPBIAN STRETCH
 # Aug. 21 2017
 # Signal Flag "Z"
