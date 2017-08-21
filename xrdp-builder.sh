@@ -31,7 +31,7 @@ sudo sed -i.bak 's/^\(EnvironmentFile.*sysconfig.*\)/#\1/' /lib/systemd/system/x
 sudo sed -i 's/^\(EnvironmentFile.*\)\(\/etc\/default\/xrdp\)/\1\/etc\/xrdp/' /lib/systemd/system/xrdp.service
 sudo sed -i.bak 's/^\(EnvironmentFile.*sysconfig.*\)/#\1/' /lib/systemd/system/xrdp-sesman.service
 sudo sed -i 's/^\(EnvironmentFile.*\)\(\/etc\/default\/xrdp\)/\1\/etc\/xrdp/' /lib/systemd/system/xrdp-sesman.service
-#
+
 # pulseaudio sink
 sudo apt install -y pulseaudio
 sudo apt install -y intltool libsndfile1-dev libspeex-dev libspeexdsp-dev libcap-dev
@@ -40,6 +40,7 @@ cd ~/Downloads
 wget https://freedesktop.org/software/pulseaudio/releases/pulseaudio-10.0.tar.gz
 tar -zxvf pulseaudio-10.0.tar.gz
 cd ~/Downloads/pulseaudio-10.0
+
 #
 ./configure
 cd ~/Downloads/xrdp/sesman/chansrv/pulse
