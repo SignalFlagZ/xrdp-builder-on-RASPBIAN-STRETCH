@@ -5,7 +5,8 @@
 # https://signal-flag-z.blogspot.com/
 # Copyright (c) 2017, Signal Flag "Z"  All rights reserved.
 
-#xrdp
+
+#xrdp script
 cd ~/Downloads
 sudo apt install -y autoconf libtool libssl-dev libpam0g-dev libfuse-dev libmp3lame-dev libpixman-1-dev libx11-dev libxfixes-dev libxrandr-dev xserver-xorg-dev
 git clone https://github.com/neutrinolabs/xrdp.git
@@ -36,6 +37,7 @@ sudo sed -i 's/^\(EnvironmentFile.*\)\(\/etc\/default\/xrdp\)/\1\/etc\/xrdp/' /l
 sudo apt install -y pulseaudio
 sudo apt install -y intltool libsndfile1-dev libspeex-dev libspeexdsp-dev libcap-dev
 
+#
 cd ~/Downloads
 wget https://freedesktop.org/software/pulseaudio/releases/pulseaudio-10.0.tar.gz
 tar -zxvf pulseaudio-10.0.tar.gz
@@ -51,6 +53,7 @@ sudo make
 sudo cp *.so /usr/lib/pulse-10.0/modules/
 cd ~
 
+#
 sudo systemctl daemon-reload
 sudo systemctl enable xrdp.service
 sudo systemctl start xrdp.service
