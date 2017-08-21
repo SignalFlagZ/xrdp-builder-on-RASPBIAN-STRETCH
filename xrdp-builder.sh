@@ -5,6 +5,9 @@
 # https://signal-flag-z.blogspot.com/
 # Copyright (c) 2017, Signal Flag "Z"  All rights reserved.
 
+#
+sudo apt update -y
+sudo apt upgrade -y
 
 #xrdp script
 cd ~/Downloads
