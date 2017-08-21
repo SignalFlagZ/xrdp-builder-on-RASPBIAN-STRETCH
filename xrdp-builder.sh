@@ -50,4 +50,8 @@ sudo make
 sudo cp *.so /usr/lib/pulse-10.0/modules/
 cd ~
 
+sudo systemctl daemon-reload
+sudo systemctl enable xrdp.service
+sudo systemctl start xrdp.service
+
 echo 'Completed. Reboot now.'
