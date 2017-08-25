@@ -6,5 +6,5 @@ If you got no audio, restart pulseaudio daemon.
 `pulseaudio --start`  
 
 ## TinkerOS
-Also available on TinkerOS v1.8 but adds some packages before.
+Also available on TinkerOS v1.8 but adds some packages before.  
 `sudo apt install git automake libltdl-dev libpulse-dev`  
