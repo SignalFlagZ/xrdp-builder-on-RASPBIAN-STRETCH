@@ -15,7 +15,7 @@ sudo apt install -y autoconf libtool libssl-dev libpam0g-dev libfuse-dev libmp3l
 git clone https://github.com/neutrinolabs/xrdp.git
 git clone https://github.com/neutrinolabs/xorgxrdp.git
 cd xrdp
-git checkout refs/tags/v0.9.3.1
+git checkout refs/tags/v0.9.4
 git submodule init
 git submodule update
 ./bootstrap
